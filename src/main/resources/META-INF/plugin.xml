@@ -1,0 +1,34 @@
+<idea-plugin>
+    <id>com.example.layoutGenerator</id>
+    <name>Screen generator</name>
+    <vendor email="mycompany@mycompany.com" url="http://www.mycompany.com">MyCompany</vendor>
+
+    <description><![CDATA[
+    Screen generator for frequent layout types
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+    <depends>org.jetbrains.android</depends>
+    <depends>org.jetbrains.kotlin</depends>
+    <depends>com.intellij.modules.androidstudio</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <group id="ScreenGenerator.TopMenu"
+               text="ScreenGenerator"
+               description="Screen generator plugin">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="com.example.UiPopupAction" class="actions.UiPopupAction" text="XML layout using plugin"
+                    description="Generate XML layout with GUI">
+            </action>
+        </group>
+    </actions>
+</idea-plugin>
